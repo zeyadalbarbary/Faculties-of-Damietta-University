@@ -48,6 +48,8 @@ body {
 
 /* تنسيق الصور داخل الأقسام */
 .section img {
+  display: block;
+  margin: auto; /* يوسطن الصورة أفقيًا */
   width: 80%;
   height: auto;
   border-radius: 10px 10px 0 0;
