@@ -70,7 +70,7 @@ body {
 }
 
 .dropdown button {
-  background-color: #ff914d;
+  background-color: #ff914d; /* تغيير لون الزر إلى #ff914d */
   border: none;
   color: white;
   padding: 10px;
@@ -140,6 +140,7 @@ h2.section-title {
   font-size: clamp(20px, 2vw, 30px);
   color: black;
 }
+
 .whatsapp-container {
     text-align: center;
     margin-top: 0%;
@@ -150,6 +151,7 @@ h2.section-title {
     max-width: 600px; /* أقصى حجم للصورة */
     transition: all 0.3s ease;
 }
+
 .div-rectangular:active {
     background-color: #33348e; /* الأزرق المستخدم في الحدود */
 }
@@ -167,5 +169,5 @@ h2.section-title {
       width: 50%; /* الحجم الافتراضي على الكمبيوتر */
       max-width: 600px; /* أقصى حجم للصورة */
       transition: all 0.3s ease;
-    }
+  }
 }
