@@ -1,13 +1,24 @@
 /* تعيين التنسيقات الأساسية للجسم */
+@font-face {
+    font-family: 'Helvetica-bd';
+    src: url('helvetica-neue-w23-for-sky-bd.ttf') format('truetype');
+}
+
+/* استدعاء الخط الثاني */
+@font-face {
+    font-family: 'Helvetica-reg';
+    src: url('HelveticaNeueW23forSKY-Reg.ttf') format('truetype');
+}
+
 body {
   margin: 0;
   padding: 0;
   display: flex;
   flex-direction: column;
   font-size: clamp(14px, 2vw, 24px);
-  font-family: Arial, sans-serif;
+  font-family: Helvetica-reg, Helvetica-bd;
   min-height: 100vh;
-  background-color: #fff;
+  color: #5C7585;
 }
 
 /* تنسيق الحاوية الرئيسية */
