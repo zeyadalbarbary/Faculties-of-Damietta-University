@@ -140,10 +140,32 @@ h2.section-title {
   font-size: clamp(20px, 2vw, 30px);
   color: black;
 }
+.whatsapp-container {
+    text-align: center;
+    margin-top: 0%;
+}
+
+.whatsapp-image {
+    width: 40%; /* الحجم الافتراضي على الكمبيوتر */
+    max-width: 600px; /* أقصى حجم للصورة */
+    transition: all 0.3s ease;
+}
+.div-rectangular:active {
+    background-color: #33348e; /* الأزرق المستخدم في الحدود */
+}
+
+.div-rectangular:active h6 {
+    color: #ff914d; /* البرتقالي المستخدم في الخلفية */
+}
 
 /* إعدادات للعرض على الشاشات الصغيرة */
 @media (max-width: 768px) {
   .section {
-      width: 100%;
+      width: 80%;
   }
+  .whatsapp-image {
+      width: 100%; /* الحجم الافتراضي على الكمبيوتر */
+      max-width: 600px; /* أقصى حجم للصورة */
+      transition: all 0.3s ease;
+    }
 }
