@@ -143,11 +143,19 @@ h2.section-title {
   color: black;
 }
 
-/* إعدادات للعرض على الشاشات الصغيرة */
-@media (max-width: 768px) {
+@media (max-width: 480px) {
   .section {
-      width: 100%;
-      flex: 1 1 90%;
-      max-width: 90%;
-      }
+    width: 95%;  /* تقليل العرض قليلًا */
+    max-width: 85%; /* منع أن تكون عريضة جدًا */
+    min-height: 350px; /* تقليل الارتفاع قليلًا */
+    padding: 15px; /* تقليل التباعد الداخلي */
+  }
+
+  .section h6 {
+    font-size: 24px; /* تصغير العنوان */
+  }
+
+  .section img {
+    width: 75%; /* تقليل حجم الصورة قليلًا */
+  }
 }
