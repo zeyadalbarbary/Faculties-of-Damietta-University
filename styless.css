@@ -136,14 +136,4 @@ h2.section-title {
       width: 90%;
       height: 360px; /* تصغير حجم المربع قليلاً */
   }
-
-  .dropdown button {
-      width: 70px;
-      height: 35px;
-      font-size: 14px;
-  }
-
-  .dropdown-content {
-      width: 100px;
-  }
 }
