@@ -1,3 +1,13 @@
+@font-face {
+    font-family: 'Helvetica-bd';
+    src: url('helvetica-neue-w23-for-sky-bd.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Helvetica-reg';
+    src: url('HelveticaNeueW23forSKY-Reg.ttf') format('truetype');
+}
+
 /* تعيين التنسيقات الأساسية للجسم */
 body {
   margin: 0;
@@ -5,9 +15,9 @@ body {
   display: flex;
   flex-direction: column;
   font-size: clamp(14px, 2vw, 24px);
-  font-family: Arial, sans-serif;
+  font-family: 'Helvetica-reg', Arial, sans-serif; /* استخدام الخط المخصص */
   min-height: 100vh;
-  background-color: #FFF6F1;
+  background-color: #FFF6F1; /* تغيير لون الخلفية */
 }
 
 /* تنسيق الحاوية الرئيسية */
@@ -30,10 +40,6 @@ body {
   background-color: #fff;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
 }
 
 /* تنسيق الصور داخل الأقسام */
@@ -47,14 +53,13 @@ body {
 .section h6 {
   font-size: 30px;
   margin: 10px 0;
+  font-family: 'Helvetica-bd', Arial, sans-serif; /* استخدام الخط المخصص */
 }
 
 /* إعدادات القوائم المنسدلة */
 .dropdown {
-  width: 100%;
+  margin-top: 50px;
   position: relative;
-  display: flex;
-  justify-content: center;
 }
 
 .dropdown button {
@@ -63,32 +68,31 @@ body {
   color: white;
   padding: 10px;
   cursor: pointer;
-  width: 80px; /* تصغير حجم الزر */
-  height: 40px;
-  font-size: 16px;
+  width: 60%;
+  font-size: 20px;
   border-radius: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
   box-shadow: 0 5px 4px rgba(210, 236, 16, 0.2);
   position: absolute;
-  bottom: 10px;
+  bottom: 0px;
   left: 50%;
   transform: translateX(-50%);
+  font-family: 'Helvetica-bd', Arial, sans-serif; /* استخدام الخط المخصص */
 }
 
 .dropdown button:hover {
   background-color: #e69500;
 }
 
-/* جعل القائمة تبدأ من أسفل الزر مباشرة */
 .dropdown-content {
   display: none;
   position: absolute;
-  top: calc(100% - 10px); /* يبدأ من حافة الزر وليس الزر بالكامل */
+  top: 100%;
   left: 50%;
   transform: translateX(-50%);
-  width: 120px; /* تحديد عرض القائمة */
+  width: 60%;
   background-color: #fff;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   z-index: 1;
@@ -102,7 +106,7 @@ body {
   text-decoration: none;
   color: black;
   border-bottom: 1px solid #0c0cf4;
-  text-align: center;
+  font-family: 'Helvetica-reg', Arial, sans-serif; /* استخدام الخط المخصص */
 }
 
 .dropdown-content a:last-child {
@@ -125,15 +129,14 @@ h2.section-title {
   justify-content: center;
   align-items: center;
   height: 100px;
-  font-family: 'Arial', sans-serif;
+  font-family: 'Helvetica-bd', Arial, sans-serif; /* استخدام الخط المخصص */
   font-size: clamp(20px, 2vw, 30px);
   color: black;
 }
 
-/* تحسين العرض على الشاشات الصغيرة */
+/* إعدادات للعرض على الشاشات الصغيرة */
 @media (max-width: 768px) {
   .section {
-      width: 90%;
-      height: 360px; /* تصغير حجم المربع قليلاً */
+      width: 100%;
   }
 }
