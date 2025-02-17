@@ -27,14 +27,3 @@ socialLinks.forEach(link => {
   });
 });
 
-// إضافة تأثير النقر على زر واتساب
-const whatsappButton = document.querySelector("#footer_dark .whatapp-footer-btn a");
-
-whatsappButton.addEventListener("mouseenter", () => {
-  whatsappButton.style.backgroundColor = "#1da851";
-  whatsappButton.style.transition = "background-color 0.3s";
-});
-
-whatsappButton.addEventListener("mouseleave", () => {
-  whatsappButton.style.backgroundColor = "#25d366";
-});
