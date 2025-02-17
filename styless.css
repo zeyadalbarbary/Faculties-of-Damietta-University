@@ -40,11 +40,15 @@ h1, h2, h3, h4, h5, h6 {
   border-radius: 30px;
   text-align: center;
   padding: 20px;
-  width: calc(25% - 20px);
-  height: 420px;
+  flex-basis: calc(25% - 20px); /* جعل العرض مرنًا */
+  max-width: 300px; /* أقصى عرض */
+  min-height: 420px; /* ارتفاع مرن */
   background-color: #fff;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* توزيع المحتوى */
 }
 
 /* تنسيق الصور داخل الأقسام */
@@ -86,14 +90,11 @@ h1, h2, h3, h4, h5, h6 {
   transform: translateX(-50%);
 }
 
-.dropdown button:hover {
-  background-color: #e69500;
-}
-
+/* تعديل مكان بداية القائمة المنسدلة */
 .dropdown-content {
   display: none;
   position: absolute;
-  top: 100%;
+  top: calc(100% - 20px); /* يبدأ من عند انحناء الزر */
   left: 50%;
   transform: translateX(-50%);
   width: 60%;
@@ -137,11 +138,19 @@ h2.section-title {
   color: black;
 }
 
-/* إعدادات للعرض على الشاشات الصغيرة */
+/* تحسين العرض على الشاشات الكبيرة */
+@media (min-width: 1200px) {
+  .section {
+    max-width: 350px; /* زيادة الحجم */
+    min-height: 500px; /* زيادة الطول */
+  }
+}
+
+/* تحسين العرض على الموبايل */
 @media (max-width: 768px) {
   .section {
-      width: 100%;
-      flex: 1 1 90%;
-      max-width: 90%;
-      }
+    width: 100%;
+    max-width: unset;
+    min-height: 380px;
+  }
 }
