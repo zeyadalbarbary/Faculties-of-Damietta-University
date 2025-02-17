@@ -166,7 +166,7 @@ h2.section-title {
       width: 80%;
   }
   .whatsapp-image {
-      width: 50%; /* الحجم الافتراضي على الكمبيوتر */
+      width: 100%; /* الحجم الافتراضي على الكمبيوتر */
       max-width: 600px; /* أقصى حجم للصورة */
       transition: all 0.3s ease;
   }
