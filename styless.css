@@ -7,7 +7,7 @@ body {
   font-size: clamp(14px, 2vw, 24px);
   font-family: Arial, sans-serif;
   min-height: 100vh;
-  background-color: #fff8dc;
+  background-color: #fff;
 }
 
 /* تنسيق الحاوية الرئيسية */
