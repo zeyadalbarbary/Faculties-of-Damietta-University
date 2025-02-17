@@ -1,28 +1,13 @@
 /* تعيين التنسيقات الأساسية للجسم */
-@font-face {
-    font-family: 'Helvetica-bd';
-    src: url('helvetica-neue-w23-for-sky-bd.ttf') format('truetype');
-}
-
-/* استدعاء الخط الثاني */
-@font-face {
-    font-family: 'Helvetica-reg';
-    src: url('HelveticaNeueW23forSKY-Reg.ttf') format('truetype');
-}
-
 body {
   margin: 0;
   padding: 0;
   display: flex;
   flex-direction: column;
   font-size: clamp(14px, 2vw, 24px);
-  font-family: Helvetica-reg, Helvetica-bd;
+  font-family: Arial, sans-serif;
   min-height: 100vh;
-  color: #000;
-}
-
-h1, h2, h3, h4, h5, h6 {
-    font-family: Helvetica-reg, Helvetica-bd;
+  background-color: #fff;
 }
 
 /* تنسيق الحاوية الرئيسية */
@@ -58,7 +43,6 @@ h1, h2, h3, h4, h5, h6 {
 .section h6 {
   font-size: 30px;
   margin: 10px 0;
-  color: #000;
 }
 
 /* إعدادات القوائم المنسدلة */
@@ -124,6 +108,7 @@ h1, h2, h3, h4, h5, h6 {
   display: block;
 }
 
+
 /* تصميم العنوان الرئيسي */
 h2.section-title {
   text-align: center;
@@ -137,19 +122,9 @@ h2.section-title {
   color: black;
 }
 
-@media (max-width: 480px) {
+/* إعدادات للعرض على الشاشات الصغيرة */
+@media (max-width: 768px) {
   .section {
-    width: 95%;  /* تقليل العرض قليلًا */
-    max-width: 85%; /* منع أن تكون عريضة جدًا */
-    min-height: 350px; /* تقليل الارتفاع قليلًا */
-    padding: 15px; /* تقليل التباعد الداخلي */
-  }
-
-  .section h6 {
-    font-size: 24px; /* تصغير العنوان */
-  }
-
-  .section img {
-    width: 75%; /* تقليل حجم الصورة قليلًا */
+      width: 100%;
   }
 }
