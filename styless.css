@@ -7,7 +7,7 @@ body {
   font-size: clamp(14px, 2vw, 24px);
   font-family: Arial, sans-serif;
   min-height: 100vh;
-  background-color: #fff;
+  background-color: #FFF6F1;
 }
 
 /* تنسيق الحاوية الرئيسية */
@@ -30,6 +30,10 @@ body {
   background-color: #fff;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
 }
 
 /* تنسيق الصور داخل الأقسام */
@@ -47,8 +51,10 @@ body {
 
 /* إعدادات القوائم المنسدلة */
 .dropdown {
-  margin-top: 50px;
+  width: 100%;
   position: relative;
+  display: flex;
+  justify-content: center;
 }
 
 .dropdown button {
@@ -57,15 +63,16 @@ body {
   color: white;
   padding: 10px;
   cursor: pointer;
-  width: 60%;
-  font-size: 20px;
+  width: 80px; /* تصغير حجم الزر */
+  height: 40px;
+  font-size: 16px;
   border-radius: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
   box-shadow: 0 5px 4px rgba(210, 236, 16, 0.2);
   position: absolute;
-  bottom: 0px;
+  bottom: 10px;
   left: 50%;
   transform: translateX(-50%);
 }
@@ -74,13 +81,14 @@ body {
   background-color: #e69500;
 }
 
+/* جعل القائمة تبدأ من أسفل الزر مباشرة */
 .dropdown-content {
   display: none;
   position: absolute;
-  top: 100%;
+  top: calc(100% - 10px); /* يبدأ من حافة الزر وليس الزر بالكامل */
   left: 50%;
   transform: translateX(-50%);
-  width: 60%;
+  width: 120px; /* تحديد عرض القائمة */
   background-color: #fff;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   z-index: 1;
@@ -94,6 +102,7 @@ body {
   text-decoration: none;
   color: black;
   border-bottom: 1px solid #0c0cf4;
+  text-align: center;
 }
 
 .dropdown-content a:last-child {
@@ -108,7 +117,6 @@ body {
   display: block;
 }
 
-
 /* تصميم العنوان الرئيسي */
 h2.section-title {
   text-align: center;
@@ -122,9 +130,20 @@ h2.section-title {
   color: black;
 }
 
-/* إعدادات للعرض على الشاشات الصغيرة */
+/* تحسين العرض على الشاشات الصغيرة */
 @media (max-width: 768px) {
   .section {
-      width: 100%;
+      width: 90%;
+      height: 360px; /* تصغير حجم المربع قليلاً */
+  }
+
+  .dropdown button {
+      width: 70px;
+      height: 35px;
+      font-size: 14px;
+  }
+
+  .dropdown-content {
+      width: 100px;
   }
 }
