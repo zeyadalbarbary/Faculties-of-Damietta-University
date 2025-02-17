@@ -40,17 +40,11 @@ h1, h2, h3, h4, h5, h6 {
   border-radius: 30px;
   text-align: center;
   padding: 20px;
-  flex-basis: calc(25% - 20px); /* جعل العرض مرنًا */
-  max-width: 300px; /* أقصى عرض */
-  min-height: 420px; /* ارتفاع مرن */
+  width: calc(25% - 20px);
+  height: 380px;
   background-color: #fff;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   position: relative;
-  display: flex;
-  flex-direction: column; /* ترتيب العناصر عموديًا */
-  justify-content: space-between; /* توزيع متساوٍ لتجنب التداخل */
-  align-items: center; /* توسيط أفقي فقط */
-  text-align: center; /* جعل النصوص في المنتصف */
 }
 
 /* تنسيق الصور داخل الأقسام */
