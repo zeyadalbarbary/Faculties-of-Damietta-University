@@ -18,7 +18,11 @@ body {
   font-size: clamp(14px, 2vw, 24px);
   font-family: Helvetica-reg, Helvetica-bd;
   min-height: 100vh;
-  color: #5C7585;
+  color: #FFF6F1;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: Helvetica-reg, Helvetica-bd;
 }
 
 /* تنسيق الحاوية الرئيسية */
