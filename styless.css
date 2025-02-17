@@ -36,10 +36,14 @@ body {
   text-align: center;
   padding: 20px;
   width: calc(25% - 20px);
-  height: 380px;
+  min-height: 380px; /* ارتفاع مبدئي */
+  height: auto; /* يجعل الارتفاع يتمدد حسب المحتوى */
   background-color: #fff;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 /* تنسيق الصور داخل الأقسام */
