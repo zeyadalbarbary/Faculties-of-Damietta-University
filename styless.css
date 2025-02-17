@@ -47,8 +47,10 @@ h1, h2, h3, h4, h5, h6 {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   position: relative;
   display: flex;
-  flex-direction: column;
-  justify-content: space-between; /* توزيع المحتوى */
+  flex-direction: column; /* ترتيب العناصر عموديًا */
+  justify-content: space-between; /* توزيع متساوٍ لتجنب التداخل */
+  align-items: center; /* توسيط أفقي فقط */
+  text-align: center; /* جعل النصوص في المنتصف */
 }
 
 /* تنسيق الصور داخل الأقسام */
@@ -90,11 +92,15 @@ h1, h2, h3, h4, h5, h6 {
   transform: translateX(-50%);
 }
 
-/* تعديل مكان بداية القائمة المنسدلة */
+.dropdown button:hover {
+  background-color: #e69500;
+}
+
 .dropdown-content {
   display: none;
+  width: 80%; /* يجعل القائمة بنفس عرض الزر */
   position: absolute;
-  top: calc(100% - 20px); /* يبدأ من عند انحناء الزر */
+  top: 100%;
   left: 50%;
   transform: translateX(-50%);
   width: 60%;
@@ -138,19 +144,11 @@ h2.section-title {
   color: black;
 }
 
-/* تحسين العرض على الشاشات الكبيرة */
-@media (min-width: 1200px) {
-  .section {
-    max-width: 350px; /* زيادة الحجم */
-    min-height: 500px; /* زيادة الطول */
-  }
-}
-
-/* تحسين العرض على الموبايل */
+/* إعدادات للعرض على الشاشات الصغيرة */
 @media (max-width: 768px) {
   .section {
-    width: 100%;
-    max-width: unset;
-    min-height: 380px;
-  }
+      width: 100%;
+      flex: 1 1 90%;
+      max-width: 90%;
+      }
 }
